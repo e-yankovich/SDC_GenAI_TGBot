@@ -37,9 +37,8 @@ func main() {
 	
 	updater := ext.NewUpdater(dispatcher, &ext.UpdaterOpts{})
 	
-	// Simplified handler approach - just two handlers
-	
-	// 1. Command handler for /story - this must be first
+
+	// 1. Command handler for /story
 	dispatcher.AddHandler(handlers.NewMessage(
 		func(msg *gotgbot.Message) bool {
 			if msg.Text == "" {
